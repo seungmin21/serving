@@ -11,6 +11,11 @@
       width: 100vw;
       height: 100vh;
     }
+    #root > div {
+      width: 70px;
+      height: 70px;
+      background-color: purple;
+    }
   </style>
 </head>
 <body>
@@ -18,14 +23,13 @@
     <div id="box-button"></div>
   </div>
   <script>
+    const root = document.getElementById('root');
     const boxButton = document.getElementById('box-button');
     console.dir(boxButton);
-    boxButton.style.width = "70px";
-    boxButton.style.height = "70px";
-    boxButton.style.background =  "purple";
 
     boxButton.addEventListener('click', () => {
-      console.log("hello");
+      let element = document.createElement('div')
+      root.appendChild(element);
     })
   </script>
 </body>

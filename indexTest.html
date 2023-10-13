@@ -14,7 +14,7 @@
       display: flex;
       flex-wrap: wrap;
     }
-    #root > div {
+    span {
       width: 70px;
       height: 70px;
       background-color: purple;
@@ -29,6 +29,9 @@
     const root = document.getElementById('root');
     const boxButton = document.getElementById('box-button');
     console.dir(boxButton);
+    boxButton.style.width = "70px"
+    boxButton.style.height = "70px"
+    boxButton.style.backgroundColor = "purple";
 
     boxButton.addEventListener('click', () => {
       let element = document.createElement('div')

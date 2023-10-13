@@ -1,3 +1,4 @@
+// 혹시 모를 2번째 대안
 const index = `
 <!DOCTYPE html>
 <html lang="en">

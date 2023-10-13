@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #root {
+      box-sizing: border-box;
+      width: 100vw;
+      height: 100vh;
+      /* flex - set */
+      display: flex;
+      flex-wrap: wrap;
+    }
+    span {
+      width: 70px;
+      height: 70px;
+      background-color: purple;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="box-button"></div>
+  </div>
+  <script>
+    const root = document.getElementById('root');
+    const boxButton = document.getElementById('box-button');
+    console.dir(boxButton);
+    boxButton.style.width = "70px"
+    boxButton.style.height = "70px"
+    boxButton.style.backgroundColor = "purple";
+
+    boxButton.addEventListener('click', () => {
+      let element = document.createElement('span')
+      root.appendChild(element);
+      setTimeout( (target) => {
+        const del = root.remove('span');
+      }, 5000)
+    })
+  </script>
+</body>
+</html>

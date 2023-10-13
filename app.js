@@ -7,6 +7,9 @@ const server = http.createServer( (request, response) => {
     response.writeHead(200, {"Content-Type": "text/html; charset = utf-8"})
     response.write("hello");
     response.end();
+  } else {
+    console.error("404 페이지를 찾을 수 없습니다.")
   }
 })
+// localhost:8080
 server.listen(8080);

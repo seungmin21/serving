@@ -8,7 +8,10 @@ const server = http.createServer( (request, response) => {
     response.write("hello");
     response.end();
   } else {
-    console.error("404 페이지를 찾을 수 없습니다.")
+    // 불일치에 대해서 오류문구 작성
+    response.writeHead(404, {"Content-Type": "text/html; charset = utf-8"})
+    response.write("404 페이지를 찾을 수 없습니다.")
+    response.end();
   }
 })
 // localhost:8080

@@ -34,8 +34,11 @@
     boxButton.style.backgroundColor = "purple";
 
     boxButton.addEventListener('click', () => {
-      let element = document.createElement('div')
+      let element = document.createElement('span')
       root.appendChild(element);
+      setTimeout( () => {
+        element.remove();
+      }, 5000)
     })
   </script>
 </body>
